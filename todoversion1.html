@@ -1,0 +1,149 @@
+<html>
+    <head>
+       <title>Lani's Todo List</title>
+    </head>
+    <body>
+        <div> Lani</div>
+
+        <button>Up </button> <br>
+        <button>Down</button> <br>
+        <button>Press me </button> 
+        <div> Make dinner </div>
+        <div> Go to Dr appt  </div>
+        <div>Pick up kids </div> 
+        
+        <script>
+           alert('Buum!');
+         /*  let todo1='Go to Dr appt';
+           let todo2='Pick up kids';
+           let todo3= 'Make dinner';
+           console.log(todo1);
+           console.log(todo2);
+           console.log(todo3);
+          */
+           let month = 'June';
+           let dayOfMonth= '2';
+           let year = '2022';
+           console.log(month + ' '+ dayOfMonth+ ' ' + year );
+
+
+           let result1 = 10 - 5 * 3 ;
+           let result2 = (12+2) * 4;
+           console.log(result1);
+           console.log(result2); 
+
+           let age=35;
+           let message= 'I am ' + age + ' years old';
+           console.log(typeof message);      //string + number = string
+
+           let button = document.createElement('button');
+            button.innerText = ' Click me';
+            document.body.appendChild(button);
+
+            document.title =' Good morning';  //how to change title
+
+
+            let todo1='Go to Dr appt';
+            let todo2 = 'Pick up kids';
+            let todo3= ' Make dinner';
+
+            let element = document.createElement('div');
+            element.innerText= todo3;
+            document.body.appendChild(element);
+
+            element = document.createElement('div');
+            element.innerText= todo2;
+            document.body.appendChild(element);
+
+            element = document.createElement('div');
+            element.innerText= todo1;
+            document.body.appendChild(element);
+
+            function greeting (firstname){
+                console.log('Helllo ' + firstname);
+                
+                }
+                greeting('Lani');
+
+                function toUpper( name) {
+                    console.log(name.toUpperCase() );
+                 }
+                toUpper('Lani');
+
+                function convertInToCm (length) {
+                    console.log(length*2.54);
+                    }
+                    
+                    convertInToCm ( 10);
+
+                // array methods push(item), pop()  , forEach()   
+                let array = [ 'Apple', ' orange', 'Banana'];
+                array.push('Kiwi ');   // adding a value to the end of the list
+                console.log(array);   // ['Apple', ' orange', 'Banana', 'Kiwi ']
+
+                array.pop();   // taking away the last value of the list
+                console.log(array); // [ 'Apple', ' orange', 'Banana']
+
+                let sum= 0;
+                const numbers = [65, 44, 12, 4];
+                numbers.forEach(myFunction);
+                
+                function myFunction(item) {
+                  sum += item;
+
+                }
+                console.log(sum);
+
+                // String methods: dotnotation to get the methods
+                let a = 'Hello';
+                console.log(a.length);
+
+                console.log('Hello'.toUpperCase());
+
+                function upper(stringArr) {            
+                  let result = [];               
+                  
+                   stringArr.forEach(function (str) {   
+                      result.push(str.toUpperCase());
+                    });
+                  
+                    console.log(result);
+                  }
+                  upper(['hello', 'world']); 
+
+                  function arrayDouble(stringArr) {
+                    let result = [];
+                  
+                    stringArr.forEach(function (str) {
+                      result.push(str.toUpperCase());
+                      result.push(str.toUpperCase());
+                    });
+                  
+                    console.log(result);
+                  }
+                  arrayDouble(['bark', 'meow']);
+                  
+
+                  function arraySum ( numArray) {
+
+                    let sum = 0 ; 
+                    
+                    numArray.forEach( function(num) {
+                    sum= sum + num;
+                    });
+                    
+                    console.log(sum);
+                    
+                    }
+                    
+                    arraySum([-1,2,5]);
+             
+
+                        
+
+          </script>
+
+ 
+    </body>
+</html>
+

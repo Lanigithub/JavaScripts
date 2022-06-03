@@ -1,0 +1,228 @@
+/*You could write your JavaScript on your Google Chrome: right click->Inspect->Console
+ Or you can write your JavaScript on the text editor: Visual Studio Code
+ JavaScript For Beginners with examples: */
+
+// https://supersimple.dev/courses/javascript-beginner-course-20201
+
+// SECTION 1: basic syntax:
+
+// Ex. 1 alert( string)   to create a popup with the text hello
+
+alert( 'Hello there')
+
+// Ex.2 Display today’s date in the Console in Chrome.
+
+console.log('Thursday, June2, 2022');
+
+// Ex 3. Overwrite the webpage using document.body.innerHTML so that the page just displays your name.
+
+document.body.innerHTML='Lani';
+
+// Ex 4. Overwrite the webpage to be empty
+document.body.innerHTML= " ";
+
+//SECTION 2: HTML codes:
+
+// EX1. Create 2 buttons next to each other, one with the label "Up" and another with the label "Down".
+<button>up</button>  <br>            // <br> skipping a line
+<button>down</button>             //button render button
+
+// Ex2.  Load Javascript from within the HTML and console.log numers.
+
+<script>
+  console.log(99);
+</script>
+
+// SECTION 3: 
+
+//Ex1. Change the value of the todo1 variable to a number (e.g. 99) and run typeof todo1. What is the type?
+console.log(typeof todo1); // string
+console.log(typeof 9); // number
+
+//Ex 2. Create 3 variables: month, dayOfMonth, year. Use these variables to 
+//console.log today's date in one line in this format: "June 2, 2022"
+
+let month = 'June';
+let dayOfMonth= '2';
+let year = '2022';
+console.log(month + ' '+ dayOfMonth+ ' ' + year ); 
+
+// Ex. 3 Save the result of 4 + 5 * 3 in a variable and console.log the result. Do the same with the result of (4 + 5) * 3.
+// Notice the rules of math are the same in programming (brackets first, then multiply, then add).
+let result1 = 4 + 5 * 3 ;
+let result2 = (4 + 5) * 3;
+console.log(result1);   // 19
+console.log(result2);    // 27
+
+// Ex.4 Create a variable age that saves your age (e.g. let age = 25;). Create another variable: let message = 'I am ' + age + ' years old';
+// What is the type of the message variable?
+
+let age=25;
+let message= 'I am ' + age + ' years old';
+console.log(typeof message);  // string
+
+
+// SECTION 4:
+
+// Ex1. Change the title that shows up in the tab to "Your_Name's Todo App" (use your name).
+
+<html>
+
+  <head>
+     <title>  Lani's Todo List</title>
+  </head>
+</html>
+
+// go to Chrome and refresh and the title shown on the tag of the webpage Lani's Todo List
+
+
+// Ex2 Add your name to the top of the webpage using a div.
+
+<html>
+
+  <head>
+     <title>  Lani's Todo List</title>
+  </head>
+  <body>
+  <div> Lani</div>                               // <div> render invisible box around its contents
+  <button>Press me</button>
+  </body>
+</html>
+
+Ex3. Reverse the todo list by re-arranging the divs in the HTML. Notice that elements are rendered from top to bottom.
+// Reverse the list back after to follow along with the rest of the tutorial.
+
+...
+<body>
+<button>Press me </button> 
+<div> Make dinner </div>
+<div> Wash car  </div>
+<div>Get groceries </div> 
+...
+
+//SECTION 5: using javascript to modify codes
+
+//Ex. 1 Use Javascript to add a button containing the text "Click Me" inside the button.
+
+let button = document.createElement('button');
+button.innerText = ' Click me';
+document.body.appendChild(button); 
+
+//Ex2. Use Javascript to change the title of the webpage that shows up in the tabs (use Google to find the code for doing this).
+document.title =' Good morning'; 
+
+// document.title to quickly change title to get the user's attention
+
+// Ex3. Reverse the order of the three todo items on the webpage by re-arranging the Javascript code. Notice how instructions 
+//are run one by one and elements are also created one by one.
+
+let todo1='Go to Dr appt';
+let todo2 = 'Pick up kids';
+let todo3= ' Make dinner';
+
+let element = document.createElement('div');
+element.innerText= todo3;
+document.body.appendChild(element);
+
+element = document.createElement('div');
+element.innerText= todo2;
+document.body.appendChild(element);
+
+element = document.createElement('div');
+element.innerText= todo1;
+document.body.appendChild(element);
+
+//SECTION 6: function
+
+// Ex1. Create a function named greeting that takes 1 parameter firstName and uses it to console.log a message saying "hello".
+
+function greeting (firstname){
+console.log('Helllo' + firstname);
+
+}
+greeting('Lani');
+
+//Ex.2 Write a function named toUpper that converts 1 string parameter str to uppercase and console.log the result. 
+//Use Google to find the code for converting a string to uppercase in Javascript.
+
+
+function toUpper( name) {
+console.log(name.toUpperCase() );
+}
+toUpper('Lani');
+
+//Ex.3 Write a function that converts a parameter length from inches to centimeters.
+
+function convertInToCm (length) {
+console.log(length*2.54);
+}
+
+convertInToCm ( 10);
+
+//SECTION 7:   functions and array methods
+//Ex 01. create an array and add/take away another value to the array ( a list of value )
+
+let array = [ 'Apple', ' orange', 'Banana'];
+array.push('Kiwi ');               // add the value to the end of the list
+array.pop( );      // delete last item
+
+// forEach method: The forEach() method calls a function for each element in an array.
+// syntax: array.forEach(function(currentValue, index, arr), thisValue)
+
+let sum = 0;
+const numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+  sum += item;
+}
+
+// Ex.1  Write a function toUpper that takes 1 parameter, an array of strings, 
+// and console.logs a new array with all the strings capitalized.
+
+function toUpper(stringArr) {            // define a function toUpper to convert the string array to uppercase
+  let result = [];               // declare an empty array and store it in result
+
+  stringArr.forEach(function (str) {    
+    result.push(str.toUpperCase());
+  });
+
+  console.log(result);
+}
+toUpper(['hello', 'world']);
+
+
+//Ex.2 Write a function arrayDouble that takes an array and console.logs a new array with every value repeated twice.
+
+function arrayDouble( stringArr) {
+
+// Ex.3 Write a function arraySum that takes an array of numbers and console.logs the sum of the numbers. 
+//(Hint: create a variable and increase its value like this): let total = 0;total = total + 10;
+
+function arraySum ( numArray) {
+
+let sum = 0 ; 
+
+numArray.forEach( function(num) {       // call for each number goes into the numArray in the function
+sum= sum + num;                     // execute this code
+});
+
+console.log(sum);
+
+}
+
+arraySum([-1,2,5]);      // -1+2+5 = 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
